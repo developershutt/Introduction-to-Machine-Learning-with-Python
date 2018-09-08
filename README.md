@@ -22,18 +22,18 @@ In pattern recognition, the k-nearest neighbors algorithm (k-NN) is a non-parame
 
 # 4. Linear Models of Classification
 
-* 4.1 Linear Regression
+# 4.1 Linear Regression
 Linear regression, or ordinary least squares (OLS), is the simplest and most classic linear method for regression. Linear regression finds the parameters w and b that minimize the mean squared error between predictions and the true regression targets, y, on the training set. The mean squared error is the sum of the squared differences between the predictions and the true values. Linear regression has no parameters, which is a benefit, but it also has no way to control model complexity. By using wave dataset :
 ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/images/linear_regression.PNG)
 
-* 4.2 Ridge Regression
-Ridge regression is also a linear model for regression, so the formula it uses to make predictions is the same one used for ordinary least squares. In ridge regression, though, the coefficients (w) are chosen not only so that they predict well on the training data, but also to fit an additional constraint. We also want the magnitude of coefficients to be as small as possible; in other words, all entries of w should be close to zero. Intuitively, this means each feature should have as little effect on the outcome as possible (which translates to having a small slope), while still predicting well. This constraint is an example of what is called regularization. Regularization means explicitly restricting a model to avoid overfitting. The particular kind used by ridge regression is known as L2 regularization
+# 4.2 Ridge Regression
+Ridge regression is also a linear model for regression, so the formula it uses to make predictions is the same one used for ordinary least squares. In ridge regression, though, the coefficients (w) are chosen not only so that they predict well on the training data, but also to fit an additional constraint. We also want the magnitude of coefficients to be as small as possible; in other words, all entries of w should be close to zero. Intuitively, this means each feature should have as little effect on the outcome as possible (which translates to having a small slope), while still predicting well. This constraint is an example of what is called regularization. Regularization means explicitly restricting a model to avoid overfitting. The particular kind used by ridge regression is known as L2 regularization.
 ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/images/ridge_regression.PNG)
 
-* Linear Regression VS Ridge Regression
+# Linear Regression VS Ridge Regression
 ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/images/LR_vs_RR.PNG)
 
-* 4.3 Lasso
+# 4.3 Lasso
 An alternative to Ridge for regularization linear regression is lasso. As with ridge regression, using lasso also restricts coeficients to be close to zero but in a slightly different way, called L1 regularization.8 The consequence of L1 regularization is that when using the lasso, some coefficients are exactly zero. This means some features are entirely ignored by the model. This can be seen as a form of automatic feature selection. Having some coefficients be exactly zero often makes a model easier to interpret, and can reveal the most important features of your model.
 
 ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/images/lasso.PNG)
