@@ -27,3 +27,18 @@ k-means clustering is one of the simplest and most commonly used clustering algo
 
 * With complex data
 ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/3.%20Unsupervised%20Learning/images/img5.PNG)
+
+
+# 5 Vector Qunatization and seeking K-Means for decomposition
+
+# Comparsion between Unsupervised models(PCA,NMF and KMeans)
+ * With Original Data
+![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/3.%20Unsupervised%20Learning/images/img6.PNG)
+
+ * With reconstructed data 
+ ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/3.%20Unsupervised%20Learning/images/img7.PNG)
+ 
+ # K-means for decomposition on make_moons dataset
+ 
+ ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/3.%20Unsupervised%20Learning/images/img8.PNG)
+
