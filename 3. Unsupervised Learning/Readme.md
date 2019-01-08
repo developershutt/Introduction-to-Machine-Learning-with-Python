@@ -42,3 +42,29 @@ k-means clustering is one of the simplest and most commonly used clustering algo
  
  ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/3.%20Unsupervised%20Learning/images/img8.PNG)
 
+# 6 Agglomerative Clustering with Dendograms
+ * Illustration
+ 
+![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/3.%20Unsupervised%20Learning/images/img9.PNG)
+
+# Hierachical clustering and dendrograms
+
+![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/3.%20Unsupervised%20Learning/images/img10.PNG)
+
+# Dendrogram
+
+![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/3.%20Unsupervised%20Learning/images/img11.PNG)
+
+
+# 7 DBSCAN
+ * Illustration
+ 
+ ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/3.%20Unsupervised%20Learning/images/img12.PNG)
+ 
+  * DBSCAN on make_moons dataset explained
+  
+  ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/3.%20Unsupervised%20Learning/images/img13.PNG)
+  
+ # 8 Comparsion of clustering algorithms
+  * on real dataset
+  ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/3.%20Unsupervised%20Learning/images/img14.PNG)
