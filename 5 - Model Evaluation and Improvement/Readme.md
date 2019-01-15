@@ -23,7 +23,7 @@ One of the most comprehensive ways to represent the result of evaluating binary 
 
 The output of confusion_matrix is a two-by-two array, where the rows correspond to the true classes and the columns correspond to the predicted classes. Each entry counts how often a sample that belongs to the class corresponding to the row (here, “not nine” and “nine”) was classified as the class corresponding to the column. The following plot illustrates this meaning:
 
-[alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/5%20-%20Model%20Evaluation%20and%20Improvement/images/img1.jpg)
+[alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/5%20-%20Model%20Evaluation%20and%20Improvement/images/img1.PNG)
 
 Entries on the main diagonal3 of the confusion matrix correspond to correct classifications, while other entries tell us how many samples of one class got mistakenly classified as another class. 
 
