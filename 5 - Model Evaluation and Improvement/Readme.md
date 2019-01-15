@@ -36,3 +36,37 @@ If we declare “a nine” the positive class, we can relate the entries of the 
 Looking at the confusion matrix, it is quite clear that something is wrong with pred_most_frequent, because it always predicts the same class. pred_dummy, on the other hand, has a very small number of true positives (4), particularly compared to the number of false negatives and false positives—there are many more false positives than true positives! The predictions made by the decision tree make much more sense than the dummy predictions, even though the accuracy was nearly the same. Finally, we can see that logistic regression does better than pred_tree in all aspects: it has more true positives and true negatives while having fewer false positives and false negatives. From this comparison, it is clear that only the decision tree and the logistic regression give reasonable results, and that the logistic regression works better than the tree on all accounts. However, inspecting the full confusion matrix is a bit cumbersome, and while we gained a lot of insight from looking at all aspects of the matrix, the process was very manual and qualitative
 
 # Relation to Accuracy
+ We already saw one way to summarize the result in the confusion matrix—by computing accuracy, which can be expressed as: 
+ 
+ ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/5%20-%20Model%20Evaluation%20and%20Improvement/images/img4.PNG)
+ 
+ In other words, accuracy is the number of correct predictions (TP and TN) divided by the number of all samples (all entries of the confusion matrix summed up). 
+ 
+ # Precision, recall and f-score: 
+ There are several other ways to summarize the confusion matrix, with the most common ones being precision and recall. Precision measures how many of the samples predicted as positive are actually positive:
+
+ ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/5%20-%20Model%20Evaluation%20and%20Improvement/images/img5.PNG)
+ 
+ Precision is used as a performance metric when the goal is to limit the number of false positives. As an example, imagine a model for predicting whether a new drug will be effective in treating a disease in clinical trials. Clinical trials are notoriously expensive, and a pharmaceutical company will only want to run an experiment if it is very sure that the drug will actually work. Therefore, it is important that the model does not produce many false positives—in other words, that it has a high precision. Precision is also known as positive predictive value (PPV). 
+ 
+ # Recall:
+ On the other hand, measures how many of the positive samples are captured by the positive predictions: 
+ 
+ ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/5%20-%20Model%20Evaluation%20and%20Improvement/images/img6.PNG)
+ 
+ Recall is used as performance metric when we need to identify all positive samples; that is, when it is important to avoid false negatives. The cancer diagnosis example from earlier in this chapter is a good example for this: it is important to find all people that are sick, possibly including healthy patients in the prediction. Other names for recall are sensitivity, hit rate, or true positive rate (TPR). 
+ 
+ There is a trade-off between optimizing recall and optimizing precision. You can trivially obtain a perfect recall if you predict all samples to belong to the positive class— there will be no false negatives, and no true negatives either. However, predicting all samples as positive will result in many false positives, and therefore the precision will be very low. On the other hand, if you find a model that predicts only the single data point it is most sure about as positive and the rest as negative, then precision will be perfect (assuming this data point is in fact positive), but recall will be very bad.
+
+
+So, while precision and recall are very important measures, looking at only one of them will not provide you with the full picture. One way to summarize them is the f-score or f-measure, which is with the harmonic mean of precision and recall: 
+
+
+ ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/5%20-%20Model%20Evaluation%20and%20Improvement/images/img7.PNG)
+ 
+ # Taking uncertainty into account:
+ 
+ ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/5%20-%20Model%20Evaluation%20and%20Improvement/images/img8.PNG) 
+   Heatmap of the decision function and the impact of changing the decision threshold
+
+To know more, explore the code given above...
