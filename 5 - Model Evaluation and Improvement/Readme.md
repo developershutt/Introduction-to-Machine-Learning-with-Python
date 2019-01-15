@@ -29,9 +29,9 @@ Entries on the main diagonal3 of the confusion matrix correspond to correct clas
 
 If we declare “a nine” the positive class, we can relate the entries of the confusion matrix with the terms false positive and false negative that we introduced earlier. To complete the picture, we call correctly classified samples belonging to the positive class true positives and correctly classified samples belonging to the negative class true negatives. These terms are usually abbreviated FP, FN, TP, and TN and lead to the following interpretation for the confusion matrix 
 
-![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/5%20-%20Model%20Evaluation%20and%20Improvement/images/img2.jpg)
+![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/5%20-%20Model%20Evaluation%20and%20Improvement/images/img2.PNG)
 
-![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/5%20-%20Model%20Evaluation%20and%20Improvement/images/img3.jpg)
+![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/5%20-%20Model%20Evaluation%20and%20Improvement/images/img3.PNG)
 
 Looking at the confusion matrix, it is quite clear that something is wrong with pred_most_frequent, because it always predicts the same class. pred_dummy, on the other hand, has a very small number of true positives (4), particularly compared to the number of false negatives and false positives—there are many more false positives than true positives! The predictions made by the decision tree make much more sense than the dummy predictions, even though the accuracy was nearly the same. Finally, we can see that logistic regression does better than pred_tree in all aspects: it has more true positives and true negatives while having fewer false positives and false negatives. From this comparison, it is clear that only the decision tree and the logistic regression give reasonable results, and that the logistic regression works better than the tree on all accounts. However, inspecting the full confusion matrix is a bit cumbersome, and while we gained a lot of insight from looking at all aspects of the matrix, the process was very manual and qualitative
 
