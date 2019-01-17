@@ -17,3 +17,23 @@ Explained in code (file is above "1- Introduction.ipynb")
   
   ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/6%20-%20Algorithms%20chains%20and%20Pipelines/images/img2.PNG)
     Proper processing
+
+
+# 2. Convenient Pipeline Creation
+
+Creating a pipeline using the syntax described earlier is sometimes a bit cumbersome, and we often don’t need user-specified names for each step. There is a convenience function, make_pipeline, that will create a pipeline for us and automatically name each step based on its class.
+  Tutorials are expained better in "2 - The General Pipeline Interface" file.
+  
+  ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/6%20-%20Algorithms%20chains%20and%20Pipelines/images/img4.PNG)
+  
+  
+ # 3 - Grid-Search Preprocessing Steps and Model Parameters
+ 
+ Using pipelines, we can encapsulate all the processing steps in our machine learning workflow in a single scikit-learn estimator. Another benefit of doing this is that we can now adjust the parameters of the preprocessing using the outcome of a supervised task like regression or classification.
+ 
+ ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/6%20-%20Algorithms%20chains%20and%20Pipelines/images/img3.PNG)
+ 
+ # 3.1 - Grid-Searching which model to use
+ 
+ In the file "3 - Grid-Searching Preprocessing Steps and Model Parameter"
+ Believe me, it's awesome. You should read.
