@@ -60,4 +60,26 @@ Computing the bag-of-words representation for a corpus of documents consists of 
 
 ![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/7%20-%20Working%20with%20Text%20Data/images/img2.PNG)
 
+
+# Rescaling the Data with tf–idf
+
+Instead of dropping features that are deemed unimportant, another approach is to rescale features by how informative we expect them to be. One of the most common ways to do this is using the term frequency–inverse document frequency (tf–idf) method. The intuition of this method is to give high weight to any term that appears often in a particular document, but not in many documents in the corpus. If a word appears often in a particular document, but not in very many documents, it is likely to be very descriptive of the content of that document. scikit-learn implements the tf–idf method in two classes: TfidfTransformer, which takes in the sparse matrix output produced by CountVectorizer and transforms it, and TfidfVectorizer, which takes in the text data and does both the bag-of-words feature extraction and the tf–idf transformation.  The tf–idf score for word w in document d as implemented in both the TfidfTransformer and TfidfVectorizer classes is given by:
+
+![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/7%20-%20Working%20with%20Text%20Data/images/img3.PNG)
+
+where N is the number of documents in the training set, Nw is the number of documents in the training set that the word w appears in, and tf (the term frequency) is the number of times that the word w appears in the query document d (the document you want to transform or encode). Both classes also apply L2 normalization after computing the tf–idf representation; in other words, they rescale the representation of each document to have Euclidean norm 1. Rescaling in this way means that the length of a document (the number of words) does not change the vectorized representation.
+
+Because tf–idf actually makes use of the statistical properties of the training data, we will use a pipeline, to ensure the results of our grid search are valid.
+
+
+# Bag-of-Words with More Than One Word (n-Grams)
+
+One of the main disadvantages of using a bag-of-words representation is that word order is completely discarded. Therefore, the two strings “it’s bad, not good at all” and “it’s good, not bad at all” have exactly the same representation, even though the meanings are inverted. Putting “not” in front of a word is only one example (if an extreme one) of how context matters. Fortunately, there is a way of capturing context when using a bag-of-words representation, by not only considering the counts of single tokens, but also the counts of pairs or triplets of tokens that appear next to each other. Pairs of tokens are known as bigrams, triplets of tokens are known as trigrams, and more generally sequences of tokens are known as n-grams. We can change the range of tokens that are considered as features by changing the ngram_range parameter of CountVectorizer or TfidfVectorizer. The ngram_range parameter is a tuple, consisting of the minimum length and the maximum length of the sequences of tokens that are considered.
+
+![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/7%20-%20Working%20with%20Text%20Data/images/img4.PNG)
+   * 1 gram word
+   
+![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/7%20-%20Working%20with%20Text%20Data/images/img5.PNG)
+   * 3-gram words
+
 (To understand how bag of words actually works, see above code 1 - Sentiment Analysis of Movie Reviews)
