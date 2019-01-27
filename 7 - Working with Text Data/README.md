@@ -83,3 +83,22 @@ One of the main disadvantages of using a bag-of-words representation is that wor
    * 3-gram words
 
 (To understand how bag of words actually works, see above code 1 - Sentiment Analysis of Movie Reviews)
+
+
+# 3 - Advanced Tokenization, Stemming, and Lemmatization
+   (No description here, Everything is explained into code. See above file "3 - Advanced Tokenization, Stemming, and Lemmatization3 - Advanced Tokenization, Stemming, and Lemmatization")
+   
+# 4 - Topic Modeling and Document Clustering
+
+One particular technique that is often applied to text data is topic modeling, which is an umbrella term describing the task of assigning each document to one or multiple topics, usually without supervision. A good example for this is news data, which might be categorized into topics like “politics,” “sports,” “finance,” and so on. If each document is assigned a single topic, this is the task of clustering the documents, as discussed in Unsupervised Learning.If each document can have more than one topic, the task relates to the decomposition methods from Unsupervised Learning. Each of the components we learn then corresponds to one topic, and the coefficients of the components in the representation of a document tell us how strongly related that document is to a particular topic. Often, when people talk about topic modeling, they refer to one particular decomposition method called Latent Dirichlet Allocation (often LDA for short).
+
+# 4.1 Latent Dirichlet Allocation
+
+Intuitively, the LDA model tries to find groups of words (the topics) that appear together frequently. LDA also requires that each document can be understood as a “mixture” of a subset of the topics. It is important to understand that for the machine learning model a “topic” might not be what we would normally call a topic in everyday speech, but that it resembles more the components extracted by PCA or NMF, which might or might not have a semantic meaning. Even if there is a semantic meaning for an LDA “topic”, it might not be something we’d usually call a topic. Going back to the example of news articles, we might have a collection of articles about sports, politics, and finance, written by two specific authors. In a politics article, we might expect to see words like “governor,” “vote,” “party,” etc., while in a sports article we might expect words like “team,” “score,” and “season.” Words in each of these groups will likely appear together, while it’s less likely that, for example, “team” and “governor” will appear together. However, these are not the only groups of words we might expect to appear together. The two reporters might prefer different phrases or different choices of words. Maybe one of them likes to use the word “demarcate” and one likes the word “polarize.” Other “topics” would then be “words often used by reporter A” and “words often used by reporter B,” though these are not topics in the usual sense of the word.
+
+(For more information see the code in filename "4 - Topic Modeling and Document Clustering". Well explained with code.)
+
+![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/7%20-%20Working%20with%20Text%20Data/images/img6.PNG)
+
+* Way to inspect the topics weights
+![alt text](https://github.com/manish29071998/Introduction-to-Machine-Learning-with-Python/blob/master/7%20-%20Working%20with%20Text%20Data/images/img7.PNG)
